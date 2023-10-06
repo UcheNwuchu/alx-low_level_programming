@@ -5,6 +5,8 @@
  */
 int main(void)
 {
+char c;
+char d;
 char c = 'a';
 while (c <= 'z')
 {
@@ -12,11 +14,11 @@ putchar(c);
 c++;
 }
 putchar('\n');
-c = 'A';
-while (c <= 'Z')
+d = 'A';
+while (d <= 'Z')
 {
-putchar(c);
-c++;
+putchar(d);
+d++;
 }
 putchar('\n');
 return (0);
