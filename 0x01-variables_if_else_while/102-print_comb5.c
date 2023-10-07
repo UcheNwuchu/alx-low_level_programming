@@ -1,36 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main -  a program that prints all possible combinations of two two digit numbers
+ * main -  a program print  combinations of two two digit numbers
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int hundreds;
-	int tens;
-	int ones;
-	int num;
+	int fTens;
+	int fOnes;
+	int sTens;
+	int sOnes;
+	int num, num2;
 
-	for (num = 0; num < 1000; num++)
+	for (num = 0; num <= 99; num++)
 	{
-		hundreds = num / 100;
-		tens = (num / 10) % 10;
-		ones = num % 10;
+		fTens = num / 10;
+		fOnes = num % 10;
 
-		if (hundreds < tens && tens < ones)
+		for (num2 = 0; num2 <= 99; num2++)
 		{
-			putchar(hundreds + '0');
-			putchar(tens + '0');
-			putchar(ones + '0');
+			sTens = num2 / 10;
+			sOnes = num2 % 10;
 
-			if (num < 700)
+			if (fTens < sTens || (fTens == sTens && fOnes < sOnes))
 			{
-				putchar(',');
+				putchar(fTens + '0');
+				putchar(fOnes + '0');
 				putchar(' ');
-			}
+				putchar(sTens + '0');
+				putchar(sOnes + '0');
+
+					if (!(fTens == 9 && fOnes == 8))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 		}
 	}
-	putchar('\n');
+		putchar('\n');
 
 	return (0);
+}
