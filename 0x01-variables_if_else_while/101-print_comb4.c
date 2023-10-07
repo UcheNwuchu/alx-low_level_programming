@@ -4,30 +4,31 @@
  * main - A program that prints combination of all two digit numbers.
  *
  * Return: 0 (Success)
- */
-int main(void)
+ */int main(void)
 {
-
-	int num = 0;
+	int hundreds;
 	int tens;
 	int ones;
+	int num;
 
-	while (num <= 99)
+	for (num = 0; num < 1000; num++)
 	{
-		tens = num % 10;
-		ones = num / 10;
+		hundreds = num / 100;
+		tens = (num / 10) % 10;
+		ones = num % 10;
 
-		if (ones < tens)
+		if (hundreds < tens && tens < ones)
 		{
-			putchar(ones + '0');
+			putchar(hundreds + '0');
 			putchar(tens + '0');
-			if (num < 89)
+			putchar(ones + '0');
+
+			if (num < 700)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
-		num++;
 	}
 	putchar('\n');
 
