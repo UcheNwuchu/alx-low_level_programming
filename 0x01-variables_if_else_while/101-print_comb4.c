@@ -4,7 +4,8 @@
  * main - A program that prints combination of all two digit numbers.
  *
  * Return: 0 (Success)
- */int main(void)
+ */
+int main(void)
 {
 	int hundreds;
 	int tens;
