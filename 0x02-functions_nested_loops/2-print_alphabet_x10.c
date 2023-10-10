@@ -4,14 +4,14 @@
  * Return: Void
  */
 void print_alphabet_x10(void)
-{char 10x_letter;
+{char c;
 int i;
 i = 0;
 while (i < 10)
 {
-for (10x_letter  = 'a'; 10x_letter <= 'z'; 10x_letter++)
+for (c  = 'a'; c <= 'z'; c++)
 {
-_putchar(10x_letter);
+_putchar(c);
 }
 _putchar('\n');
 i++;
