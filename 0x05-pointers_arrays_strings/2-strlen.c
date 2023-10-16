@@ -3,9 +3,9 @@
 /**
  * _strlen - returns the length of a string
  *
- * @s: arg s
+ * @s: string
  *
- * Return: String length
+ * Return: length
  */
 
 int _strlen(char *s)
