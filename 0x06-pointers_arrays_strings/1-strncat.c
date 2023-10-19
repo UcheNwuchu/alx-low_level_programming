@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _strncat - concatinate the values of two integers.
+* _strncat - a function that concatenates two strings
 * @dest: arg a
 * @src: arg b
 * @n: arg n
